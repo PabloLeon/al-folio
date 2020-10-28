@@ -8,6 +8,11 @@
 $max-content-width: 800px;
 
 // Colors
+
+$indigo-color:        #7f9cf5 !default;
+$indigo-color-light:  #a3bffa !default;
+
+
 $red-color:           #FF3636 !default;
 $red-color-dark:      #B71C1C !default;
 $orange-color:        #F29105 !default;
@@ -25,6 +30,7 @@ $light-purple-color:  lighten($purple-color, 25%);
 $pink-color:          #f92080 !default;
 $pink-color-light:    #ffdddd !default;
 $yellow-color:        #efcc00 !default;
+$light-yellow-color:  lighten($yellow-color, 25%);
 
 $grey-color:          #828282 !default;
 $grey-color-light:    lighten($grey-color, 40%);
