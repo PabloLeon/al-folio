@@ -19,6 +19,7 @@ To give your project a background in the portfolio page, just add the img tag to
     img: /assets/img/12.jpg
     ---
 
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/1.jpg' | relative_url }}" alt="" title="example image"/>
@@ -41,6 +42,9 @@ To give your project a background in the portfolio page, just add the img tag to
 <div class="caption">
     This image can also have a caption. It's like magic.
 </div>
+
+<p id="viewof-p"></p>
+<div id="display"></div>
 
 You can also put regular text between your rows of images.
 Say you wanted to write a little bit about your project before you posted the rest of the images.
@@ -75,3 +79,20 @@ Here's the code for the last row of images above:
     </div>
 </div>
 ```
+<script type="module">
+  import notebook from "https://api.observablehq.com/@fil/tissots-indicatrix.js";
+
+  const renders = {
+    "viewof p": "#viewof-p",
+    "display": "#display",
+  };
+
+  import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@2?module";
+  for (let i in renders)
+    renders[i] = document.querySelector(renders[i]);
+
+  Runtime.load(notebook, (variable) => {
+    if (renders[variable.name])
+      return new Inspector(renders[variable.name]);
+  });
+</script>
