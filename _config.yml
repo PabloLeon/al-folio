@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Pablo
 middle_name: 
 last_name: León-Villagrá
-email: pablo.leon-villagra@warwick.ed.uk
+email: pablo.leon-villagra@warwick.ac.uk
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: #
 url: # the base hostname & protocol for your site
